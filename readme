@@ -1,0 +1,13 @@
+hi, this repo is for me
+
+$ docker build -t apkbuilds .
+$ docker run \
+      -v "$PWD/src:/home/user/src" \
+      -v "$PWD/abuild:/home/user/.abuild" \
+      -v "$PWD/packages:/home/user/packages" \
+      -w "/home/user/src" \
+      -it apkbuilds
+
+$ # abuild-keygen -ain
+pkg $ abuild -r
+$ apk add ~/packages/.../pkg.apk
